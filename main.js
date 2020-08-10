@@ -137,8 +137,19 @@ while(loading) {
 
 // i didn't get it. maybe watch it later again!
 
+const deadcall = () => {
+    alert("function called through onclick event via function");
+}
 
+// strings
 
+var str = "lorem ipsum is grabage";
+console.log('\n' + str)
+console.log(str.length);
+console.log(str.indexOf("is"));
+console.log(str.slice(0,-10))
+console.log(str.substring(0, 12));
+console.log(str.replace("is", "was"));
 
 
 
