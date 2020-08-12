@@ -41,7 +41,8 @@
     *   text.replace("from", "to"); // to replace some text from string.
     *   text.toUpperCase();         // to convert string to upper case.
     *   text.toLowerCase();         // to covert string to lower case.
-    *   text.trim()                      // removes whitespace from both sides of a string
+    *   text.trim()                 // removes whitespace from both sides of a string
+    *   object.hasOwnProperty()     //  takes property name as argument and returns whether that property belongs to object or not using boolean (T/F)
     *   
  
 
