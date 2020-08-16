@@ -1,0 +1,58 @@
+* {
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	display: grid;
+	place-content: center;
+}
+#title {
+	text-align: center;
+	margin: .3em 0;
+	color: #333444;
+}
+#container {
+	width: 50vw;
+	height: 50vh;
+	background: #333444;
+	border-radius: 3em;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#input {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+}
+#input > input {
+	width: 85%;
+	padding: .7em;
+	margin: .5em 0;
+}
+#create {
+	font-size: 1.2em;
+	border: 2px solid white;
+	background: black;
+	color: white;
+	font-weight: bolder;
+	outline: none;
+	margin-top: 1.5em;
+	padding: .4em;
+	width: 70%;
+}
+#show {
+	width: 50%;
+	height: 100%;
+}
+#show h3 {
+	text-align: center;
+	color: white;
+}
+#taskDisplay {
+	color: #676A90;
+	display: none;
+}
