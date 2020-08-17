@@ -110,10 +110,6 @@
                   tomorrow: { low: 68, high: 80 }
                 };
                 ->  const { today: {low: todayLow, high: todayHigh} }; //get it? :)
-    *   
-            
-
-
 
 
 
