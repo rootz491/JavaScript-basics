@@ -1,3 +1,4 @@
+
 class person {
     constructor(name, aged) {
         this.name = name;

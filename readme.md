@@ -109,7 +109,64 @@
                   today: { low: 64, high: 77 },
                   tomorrow: { low: 68, high: 80 }
                 };
-                ->  const { today: {low: todayLow, high: todayHigh} }; //get it? :)
+                ->  const { today: {low: todayLow, high: todayHigh} }; //get 
+                it? :)
+    
+    
+    *   array = Object.values(object_name); // copy object values (NOT keys) into Object.
+            const arr = Object.values(ob1);
+            ->  arr = [value1, value2, ...valueN]
+        after making it into array, iterate over the values using 'spread' operator [...arr]
+    
+        alternative [OLD]
+            const something = (obj.value1, ... , obj.valueN) => {//something}
+    
+    *   const karan = {...person}   //  to make copy of object
+        
+    *   using SPREAD operator we can spread the list datatype into unique values to pass it as an argument, 
+    *   during DESTRUCTURING, we are extracting the values into unique variables rather than passing them as argument. 
+            const person {
+                name: "karan",
+                age: 18,
+                job: "Web developer"
+            }
+        ->  const { name, age, job } = person;
+    
+    *   Destructing a function is great idea, potentially saving lines of code!
+            const fn = ({ name, age, jobTitle }) => { //something }
+    *   Destructuring for assigning new name of variable AKA object's property.
+            const { oldVar: newVar } = object
+            const fn = ({name: fullName, age, job}) = {}  // assigning name within parameter.  
+    
+    *   filter() to filter-out item by properties on basis of some of it's values.
+          ->    const filteredCities = countries.filter(country => country.code === 'IN')
+    
+    *   restructuring distinct data into an object.
+            countries.map(({city, code, longitude, latitude}, index) => (
+               <tr key={index}>
+                    <td>{city}</td>
+                    <td>{code}</td>
+                    <td>{longitude}</td>
+                    <td>{latitude}</td>
+               </tr>
+            ))
+    
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
 
 
 
