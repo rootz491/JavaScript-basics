@@ -45,4 +45,12 @@ if(NaN !== NaN) {
 
 
 
+//-----------------------------------------------------
 
+//  chaining function
+
+
+const phrase = "I am a sentence";
+console.log(phrase)
+const flip = phrase.split(" ").reverse().join(" ");
+console.log(flip);
