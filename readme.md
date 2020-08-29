@@ -64,7 +64,7 @@
     *   prompt()                    //  method displays a dialog box that prompts the visitor for input.
 
 
-### ES6
+## ES6
     
     *   let and const should be used to declare and initialize variables.
     *   const makes a variable as constant, and it is good practice to give name to 'const' variables in upper case.
@@ -192,7 +192,7 @@
 
 
 
-# RegEx: Regular expressions
+## RegEx: Regular expressions
     
     ->  helps to find patterns, 'stringName.test(regex)' returns true if found!
             let myString = "my name is karan";
@@ -294,6 +294,81 @@
         
 
 
+
+## Javascript DOM:
+    
+    ->  Fetch elements: 
+            *   getElementById('_id_')                      //  unique item
+            *   getElementsByClassName('_class_')           //  multiple items
+            *   getElementByTagName('li')                   
+            *   querySelector('#id OR .class OR tagName')   //  all in one - single
+            *   querySelectorAll('same')                    //  all-in-one multiple items
+    
+            ->  By sudo classes or attributes:
+                    *   querySelector('input[type="submit"]')
+                    *   querySelector('.class_name:last-child')     //  or :nth-child(3) or 
+                    *   querySelector('.class_name:nth-of-type(odd)')
+    
+            ->  Parent, Children and siblings:
+                let item = document.querySelector('#item')
+                    *   item.parentNode                 //  PARENT
+                    *   item.parentElement              //  similar 
+                    *   item.parentNode.parentNode      //  parent of parent
+                    *   item.childNode                  //  CHILD
+                    *   item.children                   //  return all children as an array
+                    *   item.firstElementChild          
+                    *   item.lastElementChild
+                    *   item.nextElementSiblings        //  SIBLING
+                    *   item.previousElementSibling
+            
+    ->  Changes in elements:
+            *   textContent
+            *   innerText
+            *   innerHTML
+            
+    ->  Create element:
+            *   let newDiv = createElement['div']
+            *   newDiv.className = 'anything'
+            *   newDiv.id = 'anything'
+            *   let newText = document.createTextNode('Hello, World!')
+            *   newDiv.appendChild(newText)
+            *   let container = docuemnt.querySelector('.container')
+            *   container.appendChild(newDiv)
+    
+    ->  Event Listener:
+            *   var button = document.getElementById('header')
+            *   button.addEventListener('click', doSomething = (e) => { //body })
+    
+            ->  Uses:
+                    *   e.target.id             //  name of ID
+                    *   e.target.className      //  className
+                    *   e.target.classList      //  list of classes used in element
+                    *   e.type          //  type of event listener
+                    *   e.clientX       //  mouse position on X axis with respect to window.
+                    *   e.clientY
+                    *   e.offsetX       //  mouse position on X axis with respect to current element.
+                    *   e.offsetY
+                    *   e.altket        //  check if alt key is pressed while trigger eventListener.
+                    *   e.crtlkey
+                    *   e.shiftkey
+    
+            ->  Types of events:
+                    *   addEventListener('click', function)
+                    *   addEventListener('dbclick', function)                                 
+                    *   addEventListener('mousedown', function)    
+                    *   addEventListener('mouseup', function)   //  when button clicked and then released the buttton, then trigger
+                    *   addEventListener('mouseenter', function)    //  whole element included
+                    *   addEventListener('mouseleave', function)
+                    *   addEventListener('mouseover', function)     //  only triggered element, not even it's chidren
+                    *   addEventListener('mouseout', function)      
+                    *   addEventListener('keydown', function)   //  capture key when it's pressed, meaning event trigger
+                    *   addEventListener('keyup', function)     //  capture key when it's pressed and release, meaning event trigger
+                    *   addEventListener('input', function)     //  trigger if anything happened with input.
+                    *   addEventListener('focus', function)     //  trigger, if it's focused
+                    *   addEventListener('submit', function)    //  trigger, when submit button clicked.
+    
+                    =>  to capture submit button click event correctly, use so it will no do it's default functtionality, i.e. 'submitting':    e.preventDefault();
+                
 
 
 
