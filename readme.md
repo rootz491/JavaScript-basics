@@ -2,9 +2,10 @@
 
     will be doing some javascript lately.
     i know 'Im late but hey i actually started :)
-
-
+    
     C'ya ...
+
+    
 
 ## topics:  [DONE]
     
@@ -17,6 +18,8 @@
     6.  Object and This
     7.  loop
     8.  DOM manipulation (little bit)
+
+
 
 ## note: 
     
@@ -36,6 +39,8 @@
     13. document.getElementById("image").src="abc.jpeg"; is to change img source of img element with Id: "image".
     14. document.getElementById("demo").addEventListener("click", myFunction); is to add "onClick" event listener using script tags.
     15. Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+
+
 
 ## methods: BASICS
     
@@ -57,7 +62,6 @@
     *   Math.max(a,b);              //  find largest of two numbers.
     *   Math.sqrt(x);               //  to find square root of number.
     *   prompt()                    //  method displays a dialog box that prompts the visitor for input.
-
 
 
 ### ES6
@@ -203,7 +207,16 @@
     ->  wildcard character or dot '.' lets to search of similar pattens by completing it.
             let reg = /kar./ -> return 'karan' or 'karma' or anyword thats present and starts with 'kar'
             let reg = /.an/  -> return 'pan', 'can', 'karan', or any word thats present and ends with 'an'.
-    ->  
+    ->  replace()  is used to find and replace the pattern
+            let str = "karan is good guy."
+            let regex  = /karan/ig;
+            let replaceText = "komal"
+            const result = str.replace(regex, replaceText)
+                        --> result = 'komal is good guy'
+    ->  using '$' sign makes replacement poweful, by allowing to capture the groups and then reuse them. like chaging order of string etc.
+            let str = "karan is good guy"
+            let regex = "/(\w+)\s(\w+)\s(\w+)\s(\w+)/"
+            console.log(str.replace(regex, "$3 $4 $2 $1"))
     
     ->  FLAGS:
         *   'i' =   ignore the difference b/w uppercase and lowercase.
@@ -216,7 +229,7 @@
                 let string = "karan is a good uno-handler."
                 let reg = /[aeiou]/ig   -> find all word with vowel character.
                 let result = string.match[reg]
-        *   character set '[a-f]' =  finds words with this range of charaters.
+        *   character set '[a-f]' =  finds words having any of character within this range.
                 let reg = /[a-z]/ig     -> find all words from string, flag i,g
         *   character set range includes numbers like [1-9] =
                 let string = "k491"
@@ -238,9 +251,9 @@
         *   caret '^' outside the character set  =  find pattern at beginning.
                 let text = "Rick and Morty"
                 let regex = /^Rick/
-                let result = text.match(regex);     ->  return ["Rick"]
+                let result = text.match(regex);     ->  return true
         *   '$' =   search pattern at the end of the screen.
-                let regex = /MORTY$/    
+                let regex = /Morty$/    
                 let result = text.test(regex)       ->  result true
         *   shorthand =>    '/\w/ig'    is equivalent to    '/[A-Za-z0-9_]+/'
         *   shorthand =>    '/\W/ig'    is equivalent to    '[^A-Za-z0-9_]'
@@ -258,6 +271,27 @@
     
         *   '\s'    =>  search for whitespace.
         *   '\S'    =>  search for non-whitespace.
+        *   quantity specifier '{}' =>  Specify the lower and upper number of patterns with quantity specifiers.
+                    let A = "woooooow";
+                    let regex = /wo{4,6}w/
+                    console.log(A.match(regex))         ->      true
+        *   only want a specific number of matches. 
+                    let name = "karaaaan"
+                    let regex = /kara{4}n/
+                            ->  only true for 'karaaaan', having 4 a's
+        *   '?'     =>  This checks for zero or one of the preceding element
+                        You can think of this symbol as saying the previous element is optional.
+                    let name = 'karan'
+                    let regex = /karaa?n/i
+                            ->  true for both 'karan' and 'karaan'
+        *   lookahead '?=...'   =>  just lookahead for specific pattern, but won't match it.
+                    let password = "abc123";
+                    let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+                    checkPass.test(password); // Returns true
+        *   name = "karan"
+            regex = /k(omal|aran)/i
+            regex.test(name)        -> true for komal or karan
+        
 
 
 
@@ -272,9 +306,6 @@
 
 
 
-    
-
-    
 
 
 
