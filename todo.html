@@ -1,37 +1,37 @@
 <html>
 	<head>
-		<title>My Todo</title>
-		<script src="todo.js"></script>
+		<title>Killer ToDo</title>
+		
 		<link rel="stylesheet" href="todo.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+		<link href='https://css.gg/close-o.css' rel='stylesheet'>
 	</head>
 	<body>
-		<div>
-			<h1 id="title">TODO</h1>
-			<div id="container">
-				<div id="input">
-					<input type="text" id="task" placeholder="task">
-					<button type="submit" onclick="createTask()" id="create">Add task</button>
+		<header>
+			<h1>Killer ToDo</h1>
+		</header>
+		<main>
+			<section>	
+				<div class="s1-title">
+					<h3>ADD TASK</h3>
+					<form id="addForm">	
+						<input type="text" name="task" id="addTask">
+						<input type="submit" name="submit" value="submit" id="submitTask">
+					</form>	
 				</div>
-
-				<div id="show">
-					<div>
-						<h3 onclick="showTask()">ENTRIES</h3>
-						<ul>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>
-									<li id="taskDisplay">placeholder1</li>		
-						</ul>
-					</div>
+				<div class="listTask">
+					<ul>
+						<li	id="items" class="first">TASKS ~
+							<button class="deleteBtn" id="deleteBtn"></button>
+						</li>
+						
+					</ul>
 				</div>
-			</div>
-		</div>
-		
+			</section>
+		</main>
+		<footer>
+			made by karan
+		</footer>
+		<script src="todo.js"></script>
 	</body>
 </html>
