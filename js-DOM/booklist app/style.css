@@ -1,0 +1,101 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    height: 100vh;
+
+}
+
+main {
+    min-height: 80%;
+}
+
+header h1 {
+    text-align: center;
+    margin: .5em 0;
+    font-size: 60px;
+}
+
+form {
+    width: 55%;
+    margin: auto;
+}
+
+div.formGroup {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em
+}
+
+.formGroup input {
+    width: 80%;
+    padding: 5px;
+    font-size: 21px;
+}
+
+.formGroup label {
+    flex: 1;
+    font-size: 26px;
+}
+
+#submitButton {
+    width: 60%;
+    margin-top: 30px;
+    padding: 7px 12px;
+    font-size: 16px;
+}
+
+table {
+    margin: 2em auto;
+    width: 80%;
+}
+
+tr {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 940px) {
+    form {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+}
+
+
