@@ -24,7 +24,7 @@
 ## note: 
     
     1.  == can be used to check for equality, but we use === to strict typeCheck to ensure that type and value, both are same.
-    2.  this refers to window object.
+    2.  'this' refers to window object.
     3.  cannot compare objects.
     4.  var str = "karan";                   // type : string
         var str = new string("karan");       // type : object
@@ -36,8 +36,8 @@
     10. document.getElementsByTagName("h1")[0].innerHTML="HELLO"; is to change the content of first h1 tag.
     11. document.getElementsById("demo").style.display="none"; is to change the css property called display of element whose ID is "demo".
     12. document.getElementsByClassName("test")[0].innerHTML="hello" is to change content of element with className: "test", first element.
-    13. document.getElementById("image").src="abc.jpeg"; is to change img source of img element with Id: "image".
-    14. document.getElementById("demo").addEventListener("click", myFunction); is to add "onClick" event listener using script tags.
+    13. document.getElementById("image").src="abc.jpeg"; is to change img source of img element with Id: "image".   {attribute change}
+    14. document.getElementById("demo").addEventListener("click", myFunction); is to add "onClick" event listener using given tags.
     15. Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
 
 
@@ -49,7 +49,7 @@
     *   text.lastIndexOf("is", 15); // searches backwards means if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.
     *   text.search("karan");       // search in a string for a string
     *   text.slice(0,-10);          // take slice from string  
-    *   text.substring(0,12);       // almost similar
+    *   text.substring(0,12);       // almost similar,  no -ive values.
     *   text.substr(7,10)           // 1st arg is index no. & 2nd arg is size to extract.
     *   text.replace("from", "to"); // to replace some text from string.
     *   text.toUpperCase();         // to convert string to upper case.
@@ -62,6 +62,8 @@
     *   Math.max(a,b);              //  find largest of two numbers.
     *   Math.sqrt(x);               //  to find square root of number.
     *   prompt()                    //  method displays a dialog box that prompts the visitor for input.
+    *   parseInt(str);              //  convert str into integer
+    *   parseFloat(str);            //  convert str into float
 
 
 ## ES6
@@ -197,7 +199,7 @@
     ->  helps to find patterns, 'stringName.test(regex)' returns true if found!
             let myString = "my name is karan";
             let reg = /karan/;
-            let result = myString.test(reg1);      -->  true
+            let result = reg.test(myString);      -->  true
     ->  regex search is case sensetive meaning that, you cannot search for 'Karan' as 'karan'.      -->     false
     ->  search for multiple patterns using OR operator '|'
             let reg = /karan|komal/ -->  returns true if found any one of them.
@@ -217,6 +219,7 @@
             let str = "karan is good guy"
             let regex = "/(\w+)\s(\w+)\s(\w+)\s(\w+)/"
             console.log(str.replace(regex, "$3 $4 $2 $1"))
+                ->  "good guy is karan"
     
     ->  FLAGS:
         *   'i' =   ignore the difference b/w uppercase and lowercase.
@@ -254,7 +257,7 @@
                 let result = text.match(regex);     ->  return true
         *   '$' =   search pattern at the end of the screen.
                 let regex = /Morty$/    
-                let result = text.test(regex)       ->  result true
+                let result = reget.test(text);       ->  result true
         *   shorthand =>    '/\w/ig'    is equivalent to    '/[A-Za-z0-9_]+/'
         *   shorthand =>    '/\W/ig'    is equivalent to    '[^A-Za-z0-9_]'
         *   shorthand =>    '/\d/'      is equivalent to    '[0-9]'
@@ -291,6 +294,9 @@
         *   name = "karan"
             regex = /k(omal|aran)/i
             regex.test(name)        -> true for komal or karan
+    
+        =>  string that starts and ends with same vowel.    //  'abcda' is TRUE
+                let re =/^([aeiou]).*\1$/;
         
 
 
