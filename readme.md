@@ -1,13 +1,55 @@
-# JavaScript
-
-    will be doing some javascript lately.
-    i know 'Im late but hey i actually started :)
+# JavaScript -> True path
     
-    C'ya ...
-
+    closure 
+    hoisting 
+    scope
     
+    Array 
+    various array method : 
+    pop push shift unshift splice slice toString join sort reverse etc...(bohot sare he mdn me jake dekh har ek method and practice those )
+    spread operator
+    
+    Object
+    creating object by literals or by object constructor or different methods
+    functions/methods inside objects 
+    optional chaining 
+    concatination of objects
+    function.prototype methods
+    accessing objects by key, value and object.entries
+    call(), apply(), bind methods
+    
+    functions 
+    functions and objects (class by es5 methods)
+    callback functions 
+    default parameters 
+    generators
+    
+    try-catch 
+    
+    Time Intervals : 
+    settimeout setinterval etc...
+    
+    then advance stuffs later .............
+    
+    And Now Dom 
+    
+    accessing Dom elements
+    children/parent nodes relation
+    creating / adding  new dom elements 
+    various js methods like for removing class from an elemen or adding a class or toggle etc ... search for it MDN is the place ..
+    Event Listeners click drag drop etc ..... 
+    
+    Ye sab toh seekkhne ke liye topics hogaye 
+    beech beech me padha bhi kar kuch aur like 
+    changing object to array kese karte he ya nodlist to arraay ye sab 
+    instagram me follow kar devs ko twitter me bhi tidbits vagera milte rahenge and ha 
+    
+    fir baad me dom me advance stuff seekhna like 
+    promise or fetch or ajax etc ....
 
-## topics:  [DONE]
+*------------------------------------------------------------*    
+
+## topics:  
     
     * Beginning with:
     1.  variables
@@ -376,10 +418,82 @@
                     =>  to capture submit button click event correctly, use so it will no do it's default functtionality, i.e. 'submitting':    e.preventDefault();
                 
 
+## ES2020
+    
+    ->  nullish coalescing operator (??):  logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+            
+            var b;
+            let c = 45;
+            let a = b ?? 45;        //  a = 45, because b is null 
 
 
 
-
+## Advance JavaScript
+    
+    --> https://dev.to/ryanameri/mastering-hard-parts-of-javascript-callbacks-i-3aj0  
+    
+    --> high order functions:   funcitons which take another function as input, or return a function.
+    
+    *    Exercise 1:
+            const addTwo = x => x+2;
+    
+    *   Exercise 2:
+            const addS = str => str + 's';
+    
+    *   Exercise 3:
+            const maps = (list, callback) => {
+                let newArr = []
+                for(let num=0; num<list.length; num++) {
+                    newArr.push(callback(list[num]))
+                }
+                return newArr;
+            }
+            
+            console.log(maps([1,2,3], addTwo))
+    
+    *   Exercise 4:
+            const forEach = (str, callback) => {
+              for (let i=0; i<str.length; i++) {
+                callback(str[i]);
+              }
+            }
+            
+            let alphabet = "";
+            const letters = ["a", "b", "c", "d"];
+            forEach(letters, function (char) {
+              alphabet += char;
+            });
+            
+            console.log(alphabet);      //  "abcd"
+    
+    *   Exercise 5:
+            const mapWith = (array, callback) =>{
+              let newArr = [];
+              forEach(array, (item) => {
+                newArr.push(callback(item));
+              });
+              return newArr;
+            }
+            
+            console.log(mapWith([1, 2, 3], addTwo));
+    
+    *   Exercise 6:
+            const reduce = (array, callback, initial) => {
+              let new_initial = initial ?? array[0];
+              forEach(array, (item) => {
+                new_initial = callback(new_initial, item);  
+              })
+              return new_initial;
+            };
+            
+            const nums = [4, 1, 3, 10];
+            
+            const add = function (a, b) {
+              return a + b;
+            };
+            
+            console.log(reduce(nums, add, 0))
+    
 
 
 
