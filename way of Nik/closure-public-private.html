@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="closure-public-private.js"></script>
+    <title>closure</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .buttonWrapper {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .buttonWrapper > button {
+            font-size: 2rem;
+            margin: 2em;
+            padding: 10px 25px;
+        }
+        #value {
+            font-size: 5rem;
+            text-align: center;
+            margin-top: 2.7em;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttonWrapper">
+        <button id="increaseButton">increase</button>
+        <button id="decreaseButton">decrease</button>
+    </div>
+    <h1 id="value">16</h1>
+</body>
+</html>

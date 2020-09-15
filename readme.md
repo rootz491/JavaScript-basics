@@ -81,7 +81,7 @@
     13. document.getElementById("image").src="abc.jpeg"; is to change img source of img element with Id: "image".   {attribute change}
     14. document.getElementById("demo").addEventListener("click", myFunction); is to add "onClick" event listener using given tags.
     15. Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
-
+    16. Using closures in this way provides benefits that are normally associated with object-oriented programming. In particular, data hiding and encapsulation.
 
 
 ## methods: BASICS
@@ -499,8 +499,12 @@
 
 
 
-
-
+# MORE: From the Way of Nik
+    
+    ->  Closures:
+        >   closures can be used as fucntion factory to create more funcitons.
+        >   closures can be used for data hiding and encapsulation.
+        >   
 
 
 
