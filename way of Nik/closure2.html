@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            width: 100%;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 2em;
+        }
+        .headerRight > button {
+            margin-left: 20px;
+            padding: 8px 20px;
+        }
+        main {
+            display: grid;
+            align-content: center;
+            min-height: 60vh;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="headerLeft">
+                <h1>closure magic</h1>
+            </div>
+            <div class="headerRight">
+                <button id="first">++</button>
+                <button id="second">--</button>
+                <button id="third">third</button>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <p>using closure, i can easily handle complex task like chaing attribute of multiple tags all at one and etc.</p>
+                <p>using <b>function factory</b>, i can create as many functions as i can.</p>
+            </div>
+        </main>
+    </div>
+    <script src="closure2.js"></script>
+</body>
+</html>
