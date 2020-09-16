@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM VALIDATION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="validation.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .wrapper {
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+        form {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+        form > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        input {
+            font-size: 1.5rem;
+            padding: .5rem 1rem;
+            width: 350px;
+            margin-left: 40px;
+        } 
+        input:focus {
+            outline: none;
+        } 
+        label {
+            font-size: 2rem;
+        }
+        .submitWrapper > button {
+            font-size: 1.4rem;
+            margin: 0 auto;
+            padding: 5px 25px;
+        }
+        #heading {
+            text-align: center;
+            color: purple;
+            font-size: 4rem;
+            margin-bottom: .5em;
+        }
+        #hint {
+            text-align: center;
+            margin-top: 3em;
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h1 id="heading">ADMIN PANEL</h1>
+        <form action="/forms/success.html" name="myForm" onsubmit="return validation()">
+            <div class="nameWrapper">
+                <label for="fname">NAME</label>
+                <input type="text" name="fname" >
+            </div>
+            <div class="passwordWrapper">
+                <label for="fpass">PASS</label>
+                <input type="password" value="" name="fpass" >
+            </div>
+            <div class="submitWrapper">
+                <button type="submit">submit</button>
+            </div>
+        </form>
+        <h2 id="hint">ERRORS</Hint></h2>
+    </div>
+
+</body>
+</html>
