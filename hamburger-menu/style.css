@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+label > img {
+    width: 40px;
+}
+
+#burgerLabel {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 3;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.sideBar {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    height: 100vh;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 3em 1em;
+    background-color: paleturquoise;
+    justify-content: center;
+    align-items: center;
+    transition: all .75s ease-out;
+    z-index: 2;
+}
+
+.hide {
+    right: 0px;
+}
+
+.sideBar img {
+    width: 80px;
+}
+
+#heading {
+    text-align: center;
+    padding: 1em;
+    z-index: 1;
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, .98);
+}
+
+header {
+    z-index: 2;
+}
+
+main {
+    min-width: 70vh;
+    padding: 4em;
+}
+
+.content {
+    margin-top: 3em;
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .sideBar {
+        width: 100%;
+        right: -600px;
+    }
+    .hide {
+        right: 0px;
+    }
+}
+
