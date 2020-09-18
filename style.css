@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: grid;
+    place-content: center;
+}
+
+
+#img {
+    width: 400px;
+}
+
+#img > img {
+    width: 100%;
+}
+
+.imgContent {
+    padding: 2em;
+    width: 100%;
+}
+
+.textArea {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.likeDislike {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.likeDislike img {
+    width: 40px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+#likePopupContainer {
+    position: absolute;
+    top: 0;
+    right: 0;    
+}
+
+#likePopupContainer > p {
+    padding: 13px 25px;
+    margin: 1em 3em;
+    width: 200px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 1s ease;
+    transform: translateX(0px);
+}
+
+#likePopup {
+    background-color: lightgreen;
+    
+}
+
+#dislikePopup {
+    background-color: red;
+    color: white;
+}
+
+.slideOut {
+    transform: translateX(100px);
+}
