@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+
+#alertBox {
+    padding: 2em;
+    min-height: 180px;
+    width: 420px;
+    margin: 3em;
+    background-color: #f4f4f4;
+
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    top: 0px;
+    -webkit-box-shadow: -17px -16px 15px -1px rgba(0,0,0,0.68);
+    -moz-box-shadow: -17px -16px 15px -1px rgba(0,0,0,0.68);
+    box-shadow: -17px -16px 15px -1px rgba(0,0,0,0.68);
+
+    transition: all .75s ease;
+}
+
+#cancelIcon {
+    width: 30px;
+    cursor: pointer;
+}
+
+#alertHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    
+}
+
+#alertMessage {
+    padding: 1em 0;
+}
+
+body {
+    position: relative;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    transition: all .5s ease;
+}
+
+.alertControl {
+    padding: 1em;
+}
+
+.alertControlHeading {
+    margin: 2em 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#alertContent {
+    display: grid;
+    align-items: center;
+}
+
+#alertValue {
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+#alertValue:focus {
+    outline: none;
+}
+
+#fireAlert {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    margin: 1em auto;
+}
