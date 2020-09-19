@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user base</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <div class="resultCard">
+        <div class="resultWrapper">
+            <h1 id="resultUser">
+                User
+            </h1>
+            <h2 id="resultName">
+                User Name
+            </h2>
+            <p id="resultEmail">
+                example@gamil.com
+            </p>
+            <div class="resultAge">
+                <h3>Age : </h3>
+                <p id="resultAge">18</p>
+            </div>
+            <div class="resultButton">
+                <button onclick="closeData()" id="resultCloseButton">close</button>
+                <button onclick="deleteData()" id="resultDeleteButton">Delete</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+
+        <div class="inputWrapper">
+            <div class="inputHeading">
+                <h1>Add User</h1>
+            </div>
+            <div class="inputMainContent">
+                <div class="inputValue">
+                    <input id="userName" type="text" placeholder="User Name">
+                    <input id="fullName" type="text" placeholder="full name">
+                    <input id="email" type="email" placeholder="example@abc.com">
+                    <input id="age" type="text" placeholder="age">
+                </div>
+                <div class="inputSubmit">
+                    <button id="inputSubmit">submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="outputWrapper">
+            <div class="outputSearch">
+                <div class="outputhHeading">
+                    <h1>Search</h1>
+                </div>
+                <div class="outputSearchBox">
+                    <input id="searchQuery" type="text" placeholder="enter your query here">
+                </div>
+                <div class="outputSubmit">
+                    <button id="outputSubmitButton">search</button>
+                </div>
+            </div>
+            <div class="outputShow">
+                <a id="info"><h3  id="result"></h3></a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

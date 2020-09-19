@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2em;
+    margin: 2em;
+    min-height: 80vh;
+}
+
+/*
+.wrapper > div {
+    border: 2px solid purple;
+}
+
+*/
+
+
+.disableClick {
+    pointer-events: none;
+}
+
+
+
+.inputHeading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.inputMainContent {
+    margin: 0 2em;
+    height: calc(100% - 7em);
+    display: grid;
+    justify-content: center;
+}
+
+.inputSubmit {
+    align-self: center;
+    justify-self: center;
+}
+
+input {
+    width: 100%;
+    margin: .7em 0;
+    padding: .2em .7em;
+    font-size: 1em;
+}
+
+.inputValue {
+    align-self: center;
+    justify-items: center;
+}
+
+.inputSubmit > button {
+    font-size: 2rem;
+    padding: 7px 25px;
+}
+
+input, input:focus, input:active {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+/*++++++++++++++++++OUTPUT+++++++++++++++++++*/
+
+
+.outputhHeading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+.outputSearchBox {
+    margin: 1em;
+    display: grid;
+    place-content: center;
+}
+
+.outputSubmit {
+    margin: 2em;
+    display: grid;
+    place-content: center;
+}
+
+.outputSubmit > button {
+    font-size: 1.2rem;
+    padding: 7px 25px;
+}
+
+.outputShow {
+    min-height: 100px;
+    margin-top: 2em;
+    padding: 1em;
+    display: grid;
+    place-content: center;
+}
+
+#info { 
+    cursor: pointer;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.result {
+    text-align: center;
+    min-width: 250px;
+    font-size: 1.5rem;
+    color: rebeccapurple;
+    padding: 10px 24px;
+    background: lightgreen;
+    border-radius: 5px;
+}
+
+.resultCard {
+    position: fixed;
+    width: 700px;
+    height: 400px;
+
+    padding: 3em;
+    
+    top: -50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 10;
+    background-color: lightgrey;
+    border: 1px solid black;
+    
+    -webkit-box-shadow: 24px 13px 5px 2px rgba(0,0,0,0.58);
+    -moz-box-shadow: 24px 13px 5px 2px rgba(0,0,0,0.58);
+    box-shadow: 24px 13px 5px 2px rgba(0,0,0,0.58);
+
+    transition: all 1s ease;
+}
+
+.resultWrapper {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#resultUser {
+    text-align: center;
+    color: rebeccapurple;
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+
+#resultName {
+    text-align: center;
+}
+
+#resultEmail {
+    text-align: center;
+}
+
+.resultAge {
+    display: flex;
+    margin: 5px 0;
+    justify-content: center;
+    gap: 1em;
+    align-items: baseline;
+    margin-bottom: 2em;
+}
+
+.resultButton {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.resultButton > button {
+    padding: 5px 25px;
+    font-size: 1.1rem;
+    min-width: 110px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    -webkit-box-shadow: 6px 6px 4px 2px rgba(0,0,0,0.58);
+    -moz-box-shadow: 6px 6px 4px 2px rgba(0,0,0,0.58);
+    box-shadow: 6px 6px 4px 2px rgba(0,0,0,0.58);
+}
+
+
+.resultButton > button:focus, .resultButton > button:active {
+    border: none;
+    outline: none;
+}
+
+.resultButton > button:active {
+    transform: scale(.8);
+}
+
+
+#resultCloseButton {
+    color: white;
+    background-color: black;
+}
+
+#resultDeleteButton {
+    color: white;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .resultCard {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .wrapper {
+        margin: 0;
+    }
+    .resultCard {
+        width: 98%;
+    }
+}
+
