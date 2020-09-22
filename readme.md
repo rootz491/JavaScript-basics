@@ -82,7 +82,7 @@
     14. document.getElementById("demo").addEventListener("click", myFunction); is to add "onClick" event listener using given tags.
     15. Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
     16. Using closures in this way provides benefits that are normally associated with object-oriented programming. In particular, data hiding and encapsulation.
-
+    17. typeof of javascript object's properties is always STRING, even if it's a string.
 
 ## methods: BASICS
     
