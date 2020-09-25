@@ -4,11 +4,22 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 
+    if (title = "" || author == "" || isbn == ""){
+        alert('fill the form first!')
+        continue;
+    }
+}
+
+button, input, input:focus, input:active {
+    outline: none;
+    border: none;
+    border-radius: 10px;
 }
 
 body {
     height: 100vh;
-
+    background-color:   plum;
+    color: white;
 }
 
 main {
@@ -19,6 +30,13 @@ header h1 {
     text-align: center;
     margin: .5em 0;
     font-size: 60px;
+}
+
+.bookPart {
+    color: rebeccapurple;
+}
+.listPart {
+    color: lisghtgrey;
 }
 
 form {
@@ -44,21 +62,43 @@ div.formGroup {
     font-size: 26px;
 }
 
+#buttonWrapper {
+    display: flex;
+    margin-top: 3em;
+}
+
 #submitButton {
-    width: 60%;
-    margin-top: 30px;
+    cursor: pointer;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 7px 12px;
     font-size: 16px;
+    color: rgb(214, 130, 214);
+    font-size: 1.2em;
+    border-radius: 5px;
 }
 
 table {
-    margin: 2em auto;
+    margin: 4em auto;
     width: 80%;
+    border-collapse: collapse;
+    border: 1px solid purple;
 }
 
 tr {
     width: 100%;
+}
 
+th {
+    color: rebeccapurple;
+    font-size: 1.5rem;
+}
+
+th, td {
+    border: 1px solid purple;
+    text-align: center;
+    padding: 1em;
 }
 
 
@@ -93,9 +133,20 @@ tr {
 }
 
 @media screen and (max-width: 600px) {
-    form {
-        width: 100%;
+    #buttonWrapper {
+        margin-top: 2em;
     }
+    #submitButton {
+        width: 75%;
 }
 
 
+
+@media screen and (max-width: 600px) {
+    .formGroup input {
+        width: 60%;
+    }
+    #bookForm {
+        padding: 3em 0;
+    }
+}
