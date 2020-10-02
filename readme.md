@@ -129,7 +129,7 @@
             Also {for functions with arguments}
                 const square = a => a*a;        // single argument function
                 const add = (a, b) => a+b;      // multiple line argument
-                const inc = (a=1, b=1) => a+b;    // assigning default value to arguments.
+                const inc = (a=1, b=1) => a+b;  // assigning default value to arguments.
     *   spread operator (...) is used to spread the array into it's elements.
             uses: 
                 ->  Takes input multiple argument as an array to pass through function.
@@ -504,7 +504,13 @@
     ->  Closures:
         >   closures can be used as fucntion factory to create more funcitons.
         >   closures can be used for data hiding and encapsulation.
-        >   
+
+
+#   JSUnconf - functional programming
+    
+    >   use map, reduce and filter instead of for loop to iterate over the items in the array.
+
+
 
 
 
