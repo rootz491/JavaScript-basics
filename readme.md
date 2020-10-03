@@ -47,7 +47,9 @@
     fir baad me dom me advance stuff seekhna like 
     promise or fetch or ajax etc ....
 
-*------------------------------------------------------------*    
+## Domains:
+    https://rootz491-users.netlify.app/ 
+    https://first-app-491.web.app/
 
 ## topics:  
     
