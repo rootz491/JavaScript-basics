@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+}
+
+#signIn, #signOut {
+    padding: 10px 15px;
+    background-color: purple;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    pointer-events: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.wrapper {
+    width: 100%;
+    background-image: radial-gradient(circle, #e082b8, #d48eca, #c69ad8, #b8a5e0, #acafe5, #9fb5e8, #93bae9, #89bfe7, #77c3e4, #68c6dc, #61c9d1, #63cac3);
+    background-size: contain;
+    padding-bottom: 3rem;
+    background-attachment: fixed;
+}
+
+main {
+    width: inherit;
+}
+
+article {
+    width: inherit;
+}
+
+.heading {
+    margin-bottom: 2em;
+}
+
+.heading > h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.image {
+    width: 30%;
+    margin: auto;
+}
+
+#rootzImg {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.writeup {
+    width: 80%;
+    margin: 3em auto;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+.commentHeading, .postHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+#commentWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+#comment {
+    padding: .7rem;
+    border: 1px solid black;
+    position: relative;
+    min-height: 6rem;
+}
+
+#commentContext {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+} 
+
+#commentName {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 1.4rem;
+}
+
+form {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#postComment {
+    margin: 4rem auto;
+}
+
+#postName {
+    width: 60%;
+}
+
+#postText {
+    height: 100px;
+    text-align: start;
+}
+
+#postName, #postText {
+    margin: .5em 0;
+    padding: .2rem;
+    font-size: 1.1rem;
+}
+
+.submitBtn {
+    width: 100%;
+    display: flex;
+}
+
+#submit {
+    margin: 0 auto;
+    padding: 7px 14px;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+
+#note {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 450px) {
+    .image {
+        width: 100%;
+    }
+    section {
+        width: 100%;
+    }
+    #commentContext {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    } 
+    .commentHeading, .postHeading {
+        text-align: center;
+    }
+    img {
+        min-height: 150px;
+    }
+    #comment {
+        border: none;
+        border-bottom: 1px dashed black;
+        padding: 0  2em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .image {
+        width: 60%;
+    }
+}
