@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IDK</title>
+
+    
+    
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+
+    
+    
+    <!--        authorize the user first        -->
+
+    <div class="auth-wrapper">
+      <h1>Authorized Yourself</h1>
+      <form id="auth">
+        <div class="emailWrapper">
+          <label for="email">email</label>
+          <input  id="email" type="email" placeholder="i.e. nickB36@gmail.com" required>
+        </div>
+        <div class="passwdWrapper">
+          <label for="passwd">passwd</label>
+          <input  id="passwd" type="password" required>
+        </div>
+        <div class="login-signup-btn">
+          <button id="loginBtn" type="submit">login</button>
+          <button id="signupBtn" type="submit">signup</button>
+        </div>
+      </form>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    <!--    main site             -->
+    
+    
+    <div class="main-wrapper">
+
+      <a id="logoutBtn" href="">log out</a>
+
+      <header>
+        <div id="findUser">
+          <h1>Find others</h1>
+        </div>
+        <div id="appInfo">
+          <h1>Home</h1>
+        </div>
+        <div id="friend">
+          <h1>Friends</h1>
+        </div>
+      </header>
+      
+      <main>
+        
+        
+        <section class="findUserContent">
+          <div id="searchUser">
+            <form id="search-form">
+              <input type="search" name="searchBar" id="searchBar">
+              <button id="submitButton" type="submit">search</button>
+            </form>
+            <div id="results">
+              <h1>Results</h1>
+              <div id="user">
+                <div id="userImg"><img src="https://img.icons8.com/ios/50/000000/add-user-male.png"/></div>
+                <div id="userName"><h2>Example</h2></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="appInfoContent visible">
+          <div id="appHeading">
+            <h2>Developed by Karan</h2>
+          </div>
+          <div id="appText">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus reprehenderit suscipit nam minima architecto ducimus atque quidem minus optio voluptatum! Odio voluptates porro alias perspiciatis quam aut, quia deserunt aspernatur.Illo voluptas cumque enim adipisci explicabo, nihil eum laudantium iusto, eius quis ab possimus ipsa, tempore suscipit aliquam reiciendis distinctio asperiores. Necessitatibus doloribus vel unde voluptatibus dolorem placeat sapiente enim.</p>
+          </div>
+          <div id="appImg">
+            <img id="myImg" src="rootz491.jpg" alt="me">
+          </div>
+          <div id="appText2">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, sint. Non ea possimus pariatur eos facilis soluta nostrum atque dolorem aut, temporibus maiores, aperiam ab in quam nulla necessitatibus voluptates!
+            Aliquam aut recusandae, eligendi iste maxime adipisci minus atque ipsa sunt facere corporis voluptatibus asperiores? Beatae, praesentium, eos commodi quia libero aliquid, temporibus nulla deleniti perferendis pariatur maiores magni at?
+            Aspernatur accusamus laboriosam molestias ducimus autem ipsum. Consectetur, rerum, modi quia est voluptates, eos atque minima veniam obcaecati dolorem explicabo sunt autem ipsa quo amet error! Neque suscipit cumque illum.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, nobis possimus placeat voluptas rerum eveniet atque perferendis ipsa aspernatur dolorem dolore laborum eum natus ea hic mollitia sequi. Possimus, odio?</p>
+          </div>
+        </section>
+
+
+        <section class="friendContent">
+          <div id="friendList">
+            
+            <div class="friendWrapper">
+              <div id="friendImage">
+                <img src="https://img.icons8.com/ios/50/000000/user-male-circle.png"/>
+              </div>
+              <div id="friendName">
+                <h2>Example</h2>
+              </div>
+              <div id="friendMessage">
+                <img src="https://img.icons8.com/ios/50/000000/sent.png"/>
+              </div>
+            </div>
+          
+          </div>
+        </section>
+
+
+      </main>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>  
+
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBHyqvNV0PW3mc9B4TlcCD3xsn9i40MTNM",
+        authDomain: "text-web-491.firebaseapp.com",
+        databaseURL: "https://text-web-491.firebaseio.com",
+        projectId: "text-web-491",
+        storageBucket: "text-web-491.appspot.com",
+        messagingSenderId: "536288404542",
+        appId: "1:536288404542:web:2ebd61ecf5e821099e1d6f",
+        measurementId: "G-XXBEBEM2D8"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+  </body>
+</html>
