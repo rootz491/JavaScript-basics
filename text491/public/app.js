@@ -33,6 +33,42 @@ friendButton.addEventListener('click', () => {
     //console.log('friend click');
 });
 
+<<<<<<< HEAD
+
+//  hamburger code:
+
+let hamburger = document.getElementById('hamburger');
+hamburger.onchange = () => {
+    let header = document.querySelector('header');
+    if (header.style.display === "block") {
+        header.style.display = "none";
+      } else {
+        header.style.display = "block";
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
     //  firebase work from here
 
 
@@ -58,6 +94,15 @@ let mainWrapper = document.querySelector('.main-wrapper');
 
 
 auth.onAuthStateChanged( user => {
+<<<<<<< HEAD
+    if(user == null) {
+        mainWrapper.removeAttribute("id");
+        authWrapper.id = 'displayNone';
+        logoutBtn.removeAttribute('id');
+      //  mainWrapper.hidden = false;
+      //  authWrapper.hidden = false;
+      //  console.log('signed in');
+=======
     if(user != null) {
         mainWrapper.removeAttribute("id");
         authWrapper.id = 'displayNone';
@@ -65,14 +110,22 @@ auth.onAuthStateChanged( user => {
       //  mainWrapper.hidden = false;
       //  authWrapper.hidden = false;
         console.log('signed in')
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
     }
     else {
         authWrapper.removeAttribute("id");
         mainWrapper.id = 'displayNone';
+<<<<<<< HEAD
+        logoutBtn.id = 'displayNone';
+      //  mainWrapper.hidden = true;
+      //  authWrapper.hidden = true;
+      //  console.log('signed out');
+=======
       
       //  mainWrapper.hidden = true;
       //  authWrapper.hidden = true;
         console.log('signed out');
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
     }
 });
 
@@ -133,7 +186,11 @@ signupBtn.addEventListener('click', e => {
 
 //  logout button
 
+<<<<<<< HEAD
+let logoutBtn = document.querySelector('.logoutBtn');
+=======
 let logoutBtn = document.getElementById('logoutBtn');
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
 logoutBtn.onclick = auth.signOut();
 
 

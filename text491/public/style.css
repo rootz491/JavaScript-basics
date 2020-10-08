@@ -95,7 +95,24 @@ body::-webkit-scrollbar {
 
 
 
+<<<<<<< HEAD
+/*      Logut Button     */
 
+.logoutBtn {
+    color: var(--content-color);
+    background-color: var(--header-bg);
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    z-index: 10;
+}
+=======
+
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
 
 
 
@@ -105,6 +122,10 @@ body::-webkit-scrollbar {
 
 
 .main-wrapper {
+<<<<<<< HEAD
+    position: relative;
+=======
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
     width: 100%;
     font-family: 'Poppins', sans-serif;
 }
@@ -116,8 +137,12 @@ header {
     background-color: var(--header-bg);
 
     display: flex;
+<<<<<<< HEAD
+    justify-content: space-evenly;
+=======
 /*    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 */  justify-content: space-evenly;
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
 
     position: fixed;
     z-index: 10;
@@ -250,6 +275,53 @@ section {
 }
 
 
+<<<<<<< HEAD
+/*      hamburger menu      */
+
+.hamburger-menu {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    display: none;
+
+    z-index: 20;
+}
+
+.hamburger-menu > img {
+    width: 35px;
+}
+
+#hamburger:checked header {
+    transform: translateX(0%);
+}  
+
+@media screen and (min-width: 751px) {
+
+}
+
+
+@media screen and (max-width: 750px) {
+    .logoutBtn {
+        bottom: default;
+        top: 1rem;
+        bottom: calc(100% - 4rem);
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    section {
+        margin-top: 1em;
+    }
+    header {
+        display: none;
+        height: 100%;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    header > div {
+        margin: 5rem 0;
+=======
 
 @media screen and (max-width: 750px) {
     section {
@@ -257,6 +329,7 @@ section {
     }
     header {
         flex-direction: column;
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
     }
     #search-form {
         width: 90%;
@@ -295,3 +368,8 @@ section {
     }
 }   
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 2bd9490c1ea1b7611196e6df780cb8ca380a8a13
