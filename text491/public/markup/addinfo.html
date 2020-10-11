@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add your info</title>
+
+    <link rel="stylesheet" href="../style/addinfo.css">
+    <script defer src="../sctipt/addinfo.js"></script>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>Thankyou form sharing your data </h1>
+        <p>it's in safe hands. And cannot be used to show advertisments!</p>
+    </div>
+    
+    <div class="wrapper">
+        <form>
+            <div class="heading">
+                <h1>Add your Data</h1>
+            </div>
+            <div class="userNameWrapper">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" required>
+            </div>
+            <div class="fullNameWrapper">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+            </div>
+            <div class="ageWrapper">
+                <label for="age">Age</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="genderWrapper">
+                <label for="gender">gender</label>
+                <select id="gender" required>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+            </div>
+            <div class="submitWrapper">
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+
+</body>
+</html>

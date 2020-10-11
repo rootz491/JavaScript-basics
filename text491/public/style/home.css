@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+}
+
+/*              HEADER section              */
+
+
+header {
+    background: rgb(168, 168, 145);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+header > a {
+    padding: .7em 1.4em;
+    font-size: 1.4em;
+    color: black;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+header > a:hover {
+    outline: 2px solid black;
+}
+
+#hamburgerWrapper {
+    padding: 2rem;
+    display: none;
+}
+
+#hamburger {
+    background-color: white;
+    width: 26.5px;
+    height: 2px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#hamburger::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    background-color: white;
+    width: 23px;
+    height: 2px;
+    z-index: 10;
+}
+
+#hamburger::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    background-color: white;
+    width: 30px;
+    height: 2px;
+    z-index: 10;
+}
+
+.out {
+    left: 0;
+}
+
+/*              MAIN section*/
+
+main {
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    padding: 2em;
+}
+
+
+
+
+
+/*              RESPONSIVE  stuff  here             */
+
+@media screen and (max-width: 750px) {
+    header {
+        position: absolute;
+        top: 0;
+        left: -60%;
+        padding-top: 5rem;
+        width: 60%;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        transition: all .5s ease;
+    }
+    header > a {
+        padding: 0;
+    }
+    #hamburgerWrapper {
+        display: block;
+    }
+}

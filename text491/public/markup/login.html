@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="./style/signup.css">
-    <link rel="stylesheet" href="./style/bg.css">
-    <title>NEW USER - signup</title>
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/bg.css">
+    <title>welcome back - login</title>
 </head>
 <body>
     
@@ -15,15 +15,15 @@
         <form>
             <div class="emailWrapper">
                 <label for="email">Email</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email">
             </div>
             <div class="passWrapper">
                 <label for="pass">Password</label>
-                <input type="text" id="pass" required>
+                <input type="text" id="pass">
             </div>
             <div class="submitWrapper">
-                <button type="submit">sign up</button>
-                <a href="./markup/login.html">already have an account?</a>
+                <button type="submit">login</button>
+                <a href="../index.html">new user?</a>
             </div>
         </form>
     </div>
@@ -46,6 +46,8 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
-    <script src="./sctipt/signup.js"></script>
+    <script src="../sctipt/login.js"></script>
+
+
 </body>
 </html>
