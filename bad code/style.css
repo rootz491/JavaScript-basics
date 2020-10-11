@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --content-bg: #278ea5;
+    --header-bg: #21e6c1;
+    --header-color:#1f4287;
+    --content-color: #071e3d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: var(--content-bg);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#displayNone {
+    display: none;
+}
+
+
+
+
+/*      auth wrapper styling        */
+
+.auth-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background-color: var(--content-bg);
+}
+
+.auth-wrapper > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#auth {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    
+    width: 100%;
+    /*
+    padding: 2em;
+    */
+}
+
+.emailWrapper, .passwdWrapper {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1.5em;
+}
+
+#auth input {
+    margin-left: auto; 
+    padding: .5rem;
+}
+
+#auth input:focus {
+    outline: none;
+}
+
+.login-signup-btn {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login-signup-btn > button {
+    font-size: 17px;
+    padding: .7em 1.4em;
+    border-radius: 5px;
+}
+
+.login-signup-btn > button:focus {
+    outline: none;
+}
+
+.hamburger-menu > img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 25px;
+}
+
+
+
+
+
+
+
+
+
+.main-wrapper {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    padding: 2rem;
+    width: 100%;
+    color: var(--header-color);
+    background-color: var(--header-bg);
+
+    display: flex;
+/*    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+*/  justify-content: space-evenly;
+
+    position: fixed;
+    z-index: 10;
+}
+
+header > div {
+    letter-spacing: 5px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+header > div > h1 {
+    border-bottom: 2px solid var(--header-bg);
+}
+
+header > div > h1:hover {
+    border-bottom: 2px solid var(--header-color);
+}
+
+main {
+    display: flex;
+}
+
+section {
+    margin-top: 8em;
+    width: 100%;
+    color: var(--content-color);
+    background: var(--content-bg);
+    transition: all .5s ease;
+    
+}
+
+
+.findUserContent, .appInfoContent, .friendContent {
+    display: none;
+    padding: 3em;
+}
+
+.visible {
+    display: block;
+}
+
+#search-form {
+    width: 450px;
+    margin: 2em auto;
+    display: flex;
+}
+
+#searchBar {
+    width: 380px;
+    padding: 6px;
+    font-size: 18px;
+}
+
+#searchBar:focus {
+    outline: none;
+}
+
+#submitButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+
+    padding: .5em 1em;
+    background: var(--header-bg);
+}
+
+#submitButton:focus, #submitButton:active {
+    border: none;
+    outline: none;
+}
+
+#results {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#results > h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+
+#user {
+    display: flex;
+    border: 2px solid var(--content-color);
+    width: 350px;
+}
+
+#userImg {
+    width: 30px;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+#userName {
+    padding-left: 3rem;
+    font-size: 1.5rem;
+    margin: auto 0;
+}
+
+/*        intro page         */
+
+
+#appImg {
+    margin: auto;
+}
+
+#myImg {
+    width: 100%;
+}
+
+#appImg {
+    width: 250px;
+}
+
+#appHeading {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+#appText {
+    font-size: 18px;
+}
+
+#myImg {
+    margin: 2em;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    section {
+        margin-top: 11em;
+    }
+    header {
+        flex-direction: column;
+    }
+    #search-form {
+        width: 90%;
+        margin: auto;
+    }
+    #searchBar {
+        width: 95%;
+        padding: 6px;
+        font-size: 18px;
+    }
+    #submitButton {
+        font-size: 15px;
+        padding: .5em 1em;
+    }
+    #user {
+        width: 100%;
+    }
+    #userName > h2 {
+        margin-right: 2em;
+        font-size: 18px;
+    }
+    #userImg {
+        padding: .5em 1em;
+    }
+    #userImg > img {
+        width: 25px;
+    }
+    .findUserContent, .appInfoContent, .friendContent {
+        padding: 5em 1em;
+    }
+    #myImg {
+        margin: 0;
+    }
+    #results > h1 {
+        margin-top: 1em;
+    }
+}   
+
