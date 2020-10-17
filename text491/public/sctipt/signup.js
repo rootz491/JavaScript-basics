@@ -29,7 +29,7 @@ firebase.auth().onAuthStateChanged( user => {
     if(user) {
         window.location.replace("./markup/home.html");
     }
-})
+});
 
 console.log("active signup");
 
