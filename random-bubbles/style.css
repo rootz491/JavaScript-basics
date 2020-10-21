@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #222444;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-family: sans-serif;
+    
+    padding: 10rem 5rem;
+}
+
+#thing {
+    position: absolute;
+    bottom: 10vh;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    animation: moving 4s linear;
+    transition: all .25s ease;
+}
+
+@keyframes moving {
+    0% {
+        bottom: 10vh;
+    }
+    25% {
+
+    }
+    50% {
+        
+    }
+    75% {
+        
+    }
+    100% {
+        bottom: 90vh;
+    }
+}
