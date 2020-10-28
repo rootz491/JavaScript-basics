@@ -29,11 +29,18 @@ let normalChaining = new Promise(function(resolve, reject) {
     let marks = Math.random() * 100;
     console.log(marks)
     if(marks > 30)
-        resolve(marks);
+        setTimeout(() => {
+            resolve(marks);
+        }, 5000);
     else
         reject('you failed!');
 });
 
+// console.log(normalChaining);         ->          this will give a pending message. meaning that message isn't resolved yet.
+
+
+/*
+still doesn't understand how promise chain to other promises and what's the point?
 
 let evaluate = marks => {
     return new Promise((resolve, reject) => {
@@ -51,12 +58,11 @@ let evaluate = marks => {
         }
     })
 }
-
+*/
 
 //   chaining to other promises.
 normalChaining.then(marks => {
     console.log(`your marks are ${marks}`);
-    return evaluate(marks);
 })
 
 .then(function() {
@@ -67,3 +73,16 @@ normalChaining.then(marks => {
     console.warn(`you're pathetic because ${err}`);
 })
 
+
+//  function can be pending
+
+promise2 = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve({
+        message: "The man likes to keep his word",
+        code: "aManKeepsHisWord"
+        });
+    }, 10 * 1000);
+});
+
+console.log(promise2);
