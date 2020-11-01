@@ -507,6 +507,21 @@
         >   closures can be used as fucntion factory to create more funcitons.
         >   closures can be used for data hiding and encapsulation.
 
+   	->	async programming (ES6):
+   		>	hold promise-deffered function in microTask queue.
+   		>	hold callback functions in task queue (callback queue).
+   		>	prioritize microtask queue over callback queue.
+   		>	when web browser API finishes, add functions to call stack (run the function) when:
+   			>	call stack is empty
+   			>	all global code run (Have the event loop check this condition)
+   		->	features:
+   			>	non-blocking applications:	we don't have to wait in a single thread and don't block further code from running.
+   			>	However long it take:	we can't predict when the browser feature's work will finish so we let JS to handle automatically running the function on it's completion.
+   			>	web applications:	Asynchronous Javascript is the back-bone of the modern web letting us build fast 'non-blocking' applications.
+   			
+   	->	classes (object oriented programming):
+   		>	
+
 
 #   JSUnconf - functional programming
     
