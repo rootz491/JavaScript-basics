@@ -1,7 +1,7 @@
 let user1 = {
-    name:   'robin',
-    score:  20,
-    increase:   function() {
+    name: 'robin',
+    score: 20,
+    increase: function () {
         this.score += 1;
     }
 }
@@ -37,7 +37,7 @@ function createUser(name, score) {
 }
 
 const userFunctionStore = {
-    increase:   function() {
+    increase: function () {
         this.score++;
     },
     /*  what if we do this ?
@@ -51,16 +51,16 @@ const userFunctionStore = {
         add();
     },
     */
-   //   Now it's working like a charm. BUT how?
-   //   it's called lexically scoped this
-   increase:   function() {
+    //   Now it's working like a charm. BUT how?
+    //   it's called lexically scoped this
+    increase: function () {
         let add = () => {
             this.score++;
         }
         add();
     },
 
-    login:  function() {
+    login: function () {
         console.log(this.name + ' logged in');
     }
 }
@@ -77,7 +77,7 @@ user2.login();
 
 //  well this is good enough BUT we are using increase and login, are they even object's property ?         NO it comes with userFunctionStore object !
 
-if(user2.hasOwnProperty('login'))
+if (user2.hasOwnProperty('login'))
     console.log(true);
 
 
@@ -106,12 +106,12 @@ function createOtherUser(name, score) {
     //  here we are nether linking other object with Object.create() nor we are returning the object
 }
 
-createOtherUser.prototype    //  {}
+createOtherUser.prototype //  {}
 
-createOtherUser.prototype.increase = function() {
+createOtherUser.prototype.increase = function () {
     this.score++;
 }
-createOtherUser.prototype.login = function() {
+createOtherUser.prototype.login = function () {
     console.log('login');
 }
 
@@ -126,7 +126,7 @@ console.log(`${user4.name} -> ${user4.score}`);
 //  SOLUTION 4: using 'class' syntactic sugar
 
 class createDifferentUser {
-    constructor (name, score) {
+    constructor(name, score) {
         this.name = name;
         this.score = score;
     }
@@ -150,21 +150,3 @@ let user5 = new createDifferentUser('karan sharma', 100)
 console.log(`${user5.name} -> ${user5.score}`);
 user5.increase();
 console.log(`${user5.name} -> ${user5.score}`);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
