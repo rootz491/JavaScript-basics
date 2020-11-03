@@ -37,7 +37,7 @@ let savvy = async function () {
     console.log(done);
 }
 
-savvy()
+savvy();
 
 //*/
     
