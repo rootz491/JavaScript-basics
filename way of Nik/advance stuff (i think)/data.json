@@ -1,4 +1,12 @@
 {
-    "name": "karan",
-    "course":   "BCA"
+    "users": {
+        "1": {
+            "name": "karan",
+            "course":   "BCA"
+        },
+        "2": {
+            "name": "nikhil",
+            "course":   "BCA"
+        }
+    }
 }

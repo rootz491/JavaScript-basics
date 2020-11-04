@@ -5,10 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>async/await</title>
-    <script src="async-await.js"></script>
+    <!-- <script src="async-await.js"></script> -->
     <!-- <script src="async-js-codeStackr.js"></script> -->
+    <script defer src="fetch.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: antiquewhite;
+        }
+        body {
+            height: 100vh;
+            background: #333;
+        }
+        #posts {
+            width: 95%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 5px;
+        }
+        .post {
+            width: 300px;
+            padding-bottom: 1em;
+            margin: 1em 0;
+            justify-self: center;
+            border: 2px solid antiquewhite;
+        }
+        .postTitle {
+            padding: 10px 0;
+            text-align: center;
+        }
+        .postBody {
+            padding: 0 10px;
+            text-align: justify;
+        }
+        .postImg {
+            width: 100%;
+        }
+    </style>
+
 </head>
 <body>
     
+    <section id="posts">
+        
+        <template id="postTemplate">
+            <div class="post">
+                <img src="" class="postImg">
+                <h4 class="postTitle"></h4>
+                <p class="postBody"></p>
+            </div>
+        </template>
+        
+    </section>
+
 </body>
 </html>
