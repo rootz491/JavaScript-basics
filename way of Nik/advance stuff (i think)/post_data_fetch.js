@@ -20,7 +20,8 @@ let sendData = data => {
         method: "POST",
         body: JSON.stringify(data),
         headers: new Headers({
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'Accept': 'application/json'
         })
     }
 

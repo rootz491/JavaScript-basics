@@ -28,10 +28,10 @@ setInterval(() => {
 
 let i = 1;
 let str = 'Karan Sharma.';
-let ori = [...str];    //  convert str into array using spread operator
+let arr = [...str];    //  convert str into array using spread operator
 let type = document.getElementById('type');
 
-ori.forEach(char => {
+arr.forEach(char => {
 
     setTimeout( () => {
         type.textContent += `${char}`;
